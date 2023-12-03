@@ -1,64 +1,56 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-
 function generateMarkdown(data) {
-  return `
+  let output = `
+  ![License Badge](https://img.shields.io/badge/License-${data.license}-green.svg)
+  
+  #### GitHub Username: ${data.github}
+  
+  #### GitHub Email Address: ${data.email}
+  
+  
   # ${data.title}
-
-## Description
-${data.description || 'No description provided.'}
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Instalation
-${data.installation || 'No installation instructions provided.'}
-
-## Usage
-${data.usage || 'No usage information provided.'}
-
-## License
-${renderLicenseBadge(data.license)}
-${renderLicenseSection(data.license)}
-
-## Contributing
-${data.contributing || 'No contributing guidelines provided.'}
-
-## Tests
-${data.tests || 'No test instructions provided.'}
-
-## Questions
-For additional questions, contact ${data.email || 'N/A'}.
-GitHub: [${data.username || 'N/A'}](https://github.com/${data.username || 'N/A'})
+  
+  ## Description
+  ${data.description}
+  
+  ## Table of Contents
+  * [Languages](#languages)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributions](#contributions)
+  * [Website](#website)
+  * [Testing](#testing)
+  * [Questions](#questions)
+  * [License](#license)`;
+  
+  data.languages = data.languages.toString().replace(/[ ]*,[ ]*|[ ]+/g, '\n* ');
+  output += `
+  ## Built With:
+  * ${data.languages}
+  
+  ## Installation
+  - ${data.installation}
+  
+  ## Usage
+  ${data.usage}
+  
+  ## Contributors
+  - ${data.contributing}
+  
+  ## Website
+  ${data.website}
+  
+  ## Tests
+  - ${data.test}
+  
+  ## Questions
+  For additional questions and information, please see the creator's GitHub profile here: github.com/${data.github}/
+  or reach out through email at ${data.email}.
+  
+  ## License
+  Copyright &copy;${new Date().getFullYear()} by ${data.contributing}.
+  Licensed under the ${data.license} license.
   `;
-}
-
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  return '';
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  return '';
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  return '';
-}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
-
-module.exports = generateMarkdown;
+  return output;
+  }
+  
+  module.exports = generateMarkdown;

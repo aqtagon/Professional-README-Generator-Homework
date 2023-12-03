@@ -1,8 +1,7 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
+const fs = require("fs");
 
-// TODO: Create an array of questions for user input
 const questions = [
     {
         type: "input",
@@ -66,7 +65,7 @@ const questions = [
       },
       {
         type: "input",
-        name: "test",
+        name: "tests",
         message: "What command should be run to run tests?",
         default: "npm test",
       },
@@ -129,21 +128,34 @@ const questions = [
       },
     ]
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    console.log(data);
-}
+const writeToFile = data => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile("generatedREADME.md", data, err => {
+      if (err) {
+        reject(err);
+       
+        return;
+      }
+      
+      resolve({
+        ok: true,
+        message: "File created!",
+      });
+    });
+  });
+};
 
-// TODO: Create a function to initialize app
+
 async function init() {
-   try {
-     const answers = await inquirer.prompt(questions);
-     const markdownContent = generateMarkdown(answers);
-     writeToFile('README.md', markdownContent);
-    } catch (error) {
-      console.error('Error initializing the app:', error);  
-    }
-}
+    try {
+      const answers = await inquirer.prompt(questions);
+      const markdownContent = generateMarkdown(answers);
+      await writeToFile(markdownContent); 
+      console.log('README.md has been successfully generated!');
+     } catch (error) {
+       console.error('Error initializing the app:', error);  
+     }
+ }
 
-// Function call to initialize app
+
 init();

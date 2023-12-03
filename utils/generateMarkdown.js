@@ -24,7 +24,7 @@ function generateMarkdown(data) {
   
   data.languages = data.languages.toString().replace(/[ ]*,[ ]*|[ ]+/g, '\n* ');
   output += `
-  ## Built With:
+  ## Languages:
   * ${data.languages}
   
   ## Installation
@@ -33,13 +33,13 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   
-  ## Contributors
+  ## Contributions
   - ${data.contributing}
   
   ## Website
   ${data.website}
   
-  ## Tests
+  ## Testing
   - ${data.test}
   
   ## Questions

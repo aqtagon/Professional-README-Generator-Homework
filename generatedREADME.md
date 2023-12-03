@@ -1,15 +1,15 @@
 
   ![License Badge](https://img.shields.io/badge/License-MIT-green.svg)
   
-  #### GitHub Username: Test
+  #### GitHub Username: test
   
-  #### GitHub Email Address: Test
+  #### GitHub Email Address: test
   
   
-  # Test
+  # test
   
   ## Description
-  Test
+  test
   
   ## Table of Contents
   * [Languages](#languages)
@@ -20,7 +20,7 @@
   * [Testing](#testing)
   * [Questions](#questions)
   * [License](#license)
-  ## Built With:
+  ## Languages:
   * Javascript
 * HTML
 * CSS
@@ -29,22 +29,22 @@
   - npm install
   
   ## Usage
-  Test
+  test
   
-  ## Contributors
-  - Test
+  ## Contributions
+  - test
   
   ## Website
-  Test
+  test
   
-  ## Tests
+  ## Testing
   - undefined
   
   ## Questions
-  For additional questions and information, please see the creator's GitHub profile here: github.com/Test/
-  or reach out through email at Test.
+  For additional questions and information, please see the creator's GitHub profile here: github.com/test/
+  or reach out through email at test.
   
   ## License
-  Copyright &copy;2023 by Test.
+  Copyright &copy;2023 by test.
   Licensed under the MIT license.
   

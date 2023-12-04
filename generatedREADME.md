@@ -1,15 +1,15 @@
 
-  ![License Badge](https://img.shields.io/badge/License-MIT-green.svg)
+  ![License Badge](https://img.shields.io/badge/License-APACHE 2.0-green.svg)
   
-  #### GitHub Username: test
+  #### GitHub Username: aqtagon
   
-  #### GitHub Email Address: test
+  #### GitHub Email Address: ahmed.danawi@gmail.com
   
   
-  # test
+  # Music Life
   
   ## Description
-  test
+  Music Life is an app that incorporates music into your everyday life based on what you are doing .
   
   ## Table of Contents
   * [Languages](#languages)
@@ -29,22 +29,22 @@
   - npm install
   
   ## Usage
-  test
+  Sign up through website
   
   ## Contributions
-  - test
+  - Ahmed Danawi
   
   ## Website
-  test
+  https://aqtagon.github.io/music-life
   
-  ## Testing
+  ## Testing  
   - undefined
   
   ## Questions
-  For additional questions and information, please see the creator's GitHub profile here: github.com/test/
-  or reach out through email at test.
+  For additional questions and information, please see the creator's GitHub profile here: github.com/aqtagon/
+  or reach out through email at ahmed.danawi@gmail.com.
   
   ## License
-  Copyright &copy;2023 by test.
-  Licensed under the MIT license.
+  Copyright &copy;2023 by Ahmed Danawi.
+  Licensed under the APACHE 2.0 license.
   
